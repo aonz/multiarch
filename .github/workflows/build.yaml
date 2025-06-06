@@ -12,11 +12,11 @@ jobs:
           - platform: ubuntu-24.04-arm64
             arch: arm64
     steps:
-      - name: echo
-        run: echo "Build container image for arch ${{ matrix.platform }} ${{ matrix.arch }}"
+      - name: Build
+        run: echo "Build container image for platform: ${{ matrix.platform }}, arch: ${{ matrix.arch }}"
   manifest:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: echo
+      - name: Manifest
         run: echo "Create multi-arch manifest"
