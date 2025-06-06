@@ -13,7 +13,7 @@ jobs:
             arch: arm64
     steps:
       - name: echo
-        run: echo "Build container image for arch: ${{ matrix.arch }}"
+        run: echo "Build container image for arch"
   manifest:
     runs-on: ubuntu-latest
     needs: build
