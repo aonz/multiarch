@@ -14,6 +14,6 @@ jobs:
       - run: echo "Build container image for arch: ${{ matrix.arch }}"
   manifest:
     runs-on: ubuntu-latest
-    needs: build
+    needs: [build]
     steps:
       - run: echo "Create multi-arch manifest"
